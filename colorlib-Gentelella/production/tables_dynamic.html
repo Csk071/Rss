@@ -21,19 +21,30 @@
     <link href="../vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css"
-        rel="stylesheet">
+          rel="stylesheet">
     <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css"
-        rel="stylesheet">
+          rel="stylesheet">
     <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css"
-        rel="stylesheet">
+          rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
 
     <style type="text/css">
-    <!--.dt-buttons
-    {
-        width:30% !important;
-        }-->
+        .tabpanel ul.bar_tabs {
+            padding: 0px !important;
+        }
+
+            .tabpanel ul.bar_tabs > li {
+                margin-left: 0px !important;
+            }
+
+                .tabpanel ul.bar_tabs > li > a {
+                    padding: 10px !important;
+                }
+        <!-- .dt-buttons {
+            width: 30% !important;
+        }
+        -->
     </style>
 </head>
 <body class="nav-md">
@@ -54,7 +65,8 @@
                         <div class="profile_info">
                             <span>Welcome,</span>
                             <h2>
-                                User</h2>
+                                User
+                            </h2>
                         </div>
                     </div>
                     <!-- /menu profile quick info -->
@@ -63,41 +75,11 @@
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                         <div class="menu_section">
                             <h3>
-                                General</h3>
+                                General
+                            </h3>
                             <ul class="nav side-menu">
                                 <li><a href="index.html"><i class="fa fa-home"></i>Dashboard</a> </li>
-                                <!--<li>
-                                    <a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="form.html">General Form</a></li>
-                                        <li><a href="form_advanced.html">Advanced Components</a></li>
-                                        <li><a href="form_validation.html">Form Validation</a></li>
-                                        <li><a href="form_wizards.html">Form Wizard</a></li>
-                                        <li><a href="form_upload.html">Form Upload</a></li>
-                                        <li><a href="form_buttons.html">Form Buttons</a></li>
-                                    </ul>
-                                </li>-->
                                 <li><a href="tables_dynamic.html"><i class="fa fa-table"></i>Table Dynamic</a></li>
-                                <!--<li><a href="projects.html"><i class="fa fa-list-alt"></i> Projects</a></li>-->
-                                <!--<li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
-                                  <ul class="nav child_menu">
-                                    <li><a href="chartjs.html">Chart JS</a></li>
-                                    <li><a href="chartjs2.html">Chart JS2</a></li>
-                                    <li><a href="morisjs.html">Moris JS</a></li>
-                                    <li><a href="echarts.html">ECharts</a></li>
-                                    <li><a href="other_charts.html">Other Charts</a></li>
-                                  </ul>
-                                </li>-->
-                                <!--<li>
-                                    <a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="e_commerce.html">E-commerce</a></li>
-                                        <li><a href="projects.html">Projects</a></li>
-                                        <li><a href="project_detail.html">Project Detail</a></li>
-                                        <li><a href="contacts.html">Contacts</a></li>
-                                        <li><a href="profile.html">Profile</a></li>
-                                    </ul>
-                                </li>-->
                             </ul>
                         </div>
                     </div>
@@ -133,93 +115,98 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">
-                                    &times;</button>
+                                    &times;
+                                </button>
                                 <h4 class="modal-title">
-                                    Add User</h4>
+                                    Add User
+                                </h4>
                             </div>
                             <div class="modal-body">
                                 <form class="form-horizontal form-label-left" novalidate>
-                                <span class="section">User Info</span>
-                                <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                                        Name <span class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6"
-                                            data-validate-words="2" name="name" placeholder="both name(s) e.g Jon Doe" required="required"
-                                            type="text">
+                                    <span class="section">User Info</span>
+                                    <div class="item form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                                            Name <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6"
+                                                   data-validate-words="2" name="name" placeholder="both name(s) e.g Jon Doe" required="required"
+                                                   type="text">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">
-                                        Email <span class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="email" id="email" name="email" required="required" class="form-control col-md-7 col-xs-12">
+                                    <div class="item form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">
+                                            Email <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="email" id="email" name="email" required="required" class="form-control col-md-7 col-xs-12">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Position">
-                                        Position <span class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="Position" class="form-control col-md-7 col-xs-12" data-validate-length-range="6"
-                                            data-validate-words="2" name="name" placeholder="Manager" required="required"
-                                            type="text">
+                                    <div class="item form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Position">
+                                            Position <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input id="Position" class="form-control col-md-7 col-xs-12" data-validate-length-range="6"
+                                                   data-validate-words="2" name="name" placeholder="Manager" required="required"
+                                                   type="text">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Office">
-                                        Office <span class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="Office" class="form-control col-md-7 col-xs-12" data-validate-length-range="6"
-                                            data-validate-words="2" name="name" placeholder="Ashram Road" required="required"
-                                            type="text">
+                                    <div class="item form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Office">
+                                            Office <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input id="Office" class="form-control col-md-7 col-xs-12" data-validate-length-range="6"
+                                                   data-validate-words="2" name="name" placeholder="Ashram Road" required="required"
+                                                   type="text">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Age">
-                                        Age <span class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="number" id="Age" name="Age" required="required" data-validate-minmax="10,100"
-                                            class="form-control col-md-7 col-xs-12">
+                                    <div class="item form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Age">
+                                            Age <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="number" id="Age" name="Age" required="required" data-validate-minmax="10,100"
+                                                   class="form-control col-md-7 col-xs-12">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="SDate">
-                                        Start Date <span class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="date" id="SDate" name="SDate" required="required" placeholder="yyyy/mm/dd"
-                                            class="datepicker form-control col-md-7 col-xs-12">
+                                    <div class="item form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="SDate">
+                                            Start Date <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="date" id="SDate" name="SDate" required="required" placeholder="yyyy/mm/dd"
+                                                   class="datepicker form-control col-md-7 col-xs-12">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Salary">
-                                        Salary <span class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="number" id="Salary" name="Salary" required="required" data-validate-minmax="4,100"
-                                            class="form-control col-md-7 col-xs-12">
+                                    <div class="item form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Salary">
+                                            Salary <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="number" id="Salary" name="Salary" required="required" data-validate-minmax="4,100"
+                                                   class="form-control col-md-7 col-xs-12">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="ln_solid">
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-md-6 col-md-offset-3">
-                                        <button type="submit" class="btn btn-primary">
-                                            Cancel</button>
-                                        <button id="send" type="submit" class="btn btn-success">
-                                            Submit</button>
+                                    <div class="ln_solid">
                                     </div>
-                                </div>
+                                    <div class="form-group">
+                                        <div class="col-md-6 col-md-offset-3">
+                                            <button type="submit" class="btn btn-primary">
+                                                Cancel
+                                            </button>
+                                            <button id="send" type="submit" class="btn btn-success">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" data-dismiss="modal" class="btn btn-default">
-                                    Close</button>
+                                    Close
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -229,93 +216,98 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">
-                                    &times;</button>
+                                    &times;
+                                </button>
                                 <h4 class="modal-title">
-                                    Edit Dialog</h4>
+                                    Edit Dialog
+                                </h4>
                             </div>
                             <div class="modal-body">
                                 <form class="form-horizontal form-label-left" novalidate>
-                                <span class="section">User Info</span>
-                                <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                                        Name <span class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="name" class="form-control col-md-7 col-xs-12" value="Sumesh" data-validate-length-range="6"
-                                            data-validate-words="2" name="name" placeholder="Name" required="required" type="text">
+                                    <span class="section">User Info</span>
+                                    <div class="item form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                                            Name <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input id="name" class="form-control col-md-7 col-xs-12" value="Sumesh" data-validate-length-range="6"
+                                                   data-validate-words="2" name="name" placeholder="Name" required="required" type="text">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">
-                                        Email <span class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="email" id="email" name="email" value="Sumesh@gmail.com" required="required"
-                                            class="form-control col-md-7 col-xs-12">
+                                    <div class="item form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">
+                                            Email <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="email" id="email" name="email" value="Sumesh@gmail.com" required="required"
+                                                   class="form-control col-md-7 col-xs-12">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Position">
-                                        Position <span class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="Position" class="form-control col-md-7 col-xs-12" value="Manager" data-validate-length-range="6"
-                                            data-validate-words="2" name="name" placeholder="Manager" required="required"
-                                            type="text">
+                                    <div class="item form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Position">
+                                            Position <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input id="Position" class="form-control col-md-7 col-xs-12" value="Manager" data-validate-length-range="6"
+                                                   data-validate-words="2" name="name" placeholder="Manager" required="required"
+                                                   type="text">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Office">
-                                        Office <span class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="Office" class="form-control col-md-7 col-xs-12" value="Ashram road" data-validate-length-range="6"
-                                            data-validate-words="2" name="name" placeholder="Ashram Road" required="required"
-                                            type="text">
+                                    <div class="item form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Office">
+                                            Office <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input id="Office" class="form-control col-md-7 col-xs-12" value="Ashram road" data-validate-length-range="6"
+                                                   data-validate-words="2" name="name" placeholder="Ashram Road" required="required"
+                                                   type="text">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Age">
-                                        Age <span class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="number" id="Age" name="Age" required="required" value="31" data-validate-minmax="10,100"
-                                            class="form-control col-md-7 col-xs-12">
+                                    <div class="item form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Age">
+                                            Age <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="number" id="Age" name="Age" required="required" value="31" data-validate-minmax="10,100"
+                                                   class="form-control col-md-7 col-xs-12">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="SDate">
-                                        Start Date <span class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="date" id="SDate" name="SDate" required="required" value="2011/04/25"
-                                            class="datepicker form-control col-md-7 col-xs-12">
+                                    <div class="item form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="SDate">
+                                            Start Date <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="date" id="SDate" name="SDate" required="required" value="2011/04/25"
+                                                   class="datepicker form-control col-md-7 col-xs-12">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Salary">
-                                        Salary <span class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="number" id="Salary" name="Salary" required="required" value="$38,000"
-                                            data-validate-minmax="4,100" class="form-control col-md-7 col-xs-12">
+                                    <div class="item form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Salary">
+                                            Salary <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="number" id="Salary" name="Salary" required="required" value="$38,000"
+                                                   data-validate-minmax="4,100" class="form-control col-md-7 col-xs-12">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="ln_solid">
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-md-6 col-md-offset-3">
-                                        <button type="submit" class="btn btn-primary">
-                                            Cancel</button>
-                                        <button id="send" type="submit" class="btn btn-success">
-                                            Submit</button>
+                                    <div class="ln_solid">
                                     </div>
-                                </div>
+                                    <div class="form-group">
+                                        <div class="col-md-6 col-md-offset-3">
+                                            <button type="submit" class="btn btn-primary">
+                                                Cancel
+                                            </button>
+                                            <button id="send" type="submit" class="btn btn-success">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" data-dismiss="modal" class="btn btn-default">
-                                    Close</button>
+                                    Close
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -324,7 +316,8 @@
                     <div class="page-title">
                         <div class="title_left">
                             <h3>
-                                Users <small>Grids</small></h3>
+                                Users <small>Grids</small>
+                            </h3>
                         </div>
                     </div>
                     <div class="clearfix">
@@ -344,22 +337,28 @@
                                     <div class="clearfix">
                                     </div>
                                 </div>-->
-                                <div class="x_content">
+                                <div class="x_content tabpanel">
                                     <div class="" role="tabpanel" data-example-id="togglable-tabs">
                                         <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
-                                            <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab"
-                                                data-toggle="tab" aria-expanded="true">Simple</a> </li>
-                                            <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab"
-                                                data-toggle="tab" aria-expanded="false">Complex</a> </li>
-                                            <li role="presentation" class=""><a href="#tab_content3" role="tab" id="profile-tab2"
-                                                data-toggle="tab" aria-expanded="false">Extensive</a> </li>
+                                            <li role="presentation" class="active">
+                                                <a href="#tab_content1" id="home-tab" role="tab"
+                                                   data-toggle="tab" aria-expanded="true">Simple</a>
+                                            </li>
+                                            <li role="presentation" class="">
+                                                <a href="#tab_content2" role="tab" id="profile-tab"
+                                                   data-toggle="tab" aria-expanded="false">Complex</a>
+                                            </li>
+                                            <li role="presentation" class="">
+                                                <a href="#tab_content3" role="tab" id="profile-tab2"
+                                                   data-toggle="tab" aria-expanded="false">Extensive</a>
+                                            </li>
                                         </ul>
                                         <div id="myTabContent" class="tab-content">
                                             <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
                                                 <p class="text-muted font-13 m-b-30">
                                                     DataTables has most features enabled by default
                                                 </p>
-                                                <table id="datatable" class="table table-hover table-striped table-bordered dt-responsive nowrap dataTable no-footer dtr-inline">
+                                                <table id="datatable" class="table table-hover table-striped table-bordered dt-responsive dataTable nowrap no-footer dtr-inline" style="width:100%;overflow-x:scroll;">
                                                     <thead>
                                                         <tr>
                                                             <th>
@@ -1531,26 +1530,30 @@
                                                     <div class="row">
                                                         <div class="col-md-4">
                                                             <button onclick="addFunc()" class="btn btn-sm btn-primary pull-left">
-                                                                Add User</button>
+                                                                Add User
+                                                            </button>
                                                         </div>
                                                         <div class="col-md-8">
                                                             <div id="Div1" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px;
                                                                 border: 1px solid #ccc">
-                                                                <i class="glyphicon glyphicon-calendar fa fa-calendar"></i><span>December 30, 2014 -
-                                                                    January 28, 2015</span> <b class="caret"></b>
+                                                                <i class="glyphicon glyphicon-calendar fa fa-calendar"></i><span>
+                                                                    December 30, 2014 -
+                                                                    January 28, 2015
+                                                                </span> <b class="caret"></b>
                                                             </div>
                                                             <div class="pull-right" style="line-height: 30px;">
-                                                                Search Employee by start date&emsp;</div>
+                                                                Search Employee by start date&emsp;
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </p>
-                                                <table id="datatable-checkbox" class="table table-hover table-striped table-bordered bulk_action dt-responsive nowrap dataTable no-footer dtr-inline">
+                                                <table id="datatable-checkbox" class="table table-hover table-striped table-bordered bulk_action dt-responsive table-responsive nowrap dataTable no-footer dtr-inline" style="width:100%;overflow-x:scroll;">
                                                     <thead>
                                                         <tr>
                                                             <th>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox1" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox1" class="flat">
+                                                            </th>
                                                             </th>
                                                             <th>
                                                                 Name
@@ -1578,9 +1581,9 @@
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox2" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox2" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Tiger Nixon
@@ -1602,16 +1605,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox3" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox3" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Garrett Winters
@@ -1633,16 +1638,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox4" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox4" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Ashton Cox
@@ -1664,16 +1671,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox5" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox5" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Cedric Kelly
@@ -1695,16 +1704,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox6" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox6" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Airi Satou
@@ -1726,16 +1737,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox7" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox7" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Brielle Williamson
@@ -1757,16 +1770,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox8" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox8" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Herrod Chandler
@@ -1788,16 +1803,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox9" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox9" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Rhona Davidson
@@ -1819,16 +1836,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox10" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox10" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Colleen Hurst
@@ -1850,16 +1869,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox11" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox11" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Sonya Frost
@@ -1881,16 +1902,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox12" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox12" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Jena Gaines
@@ -1912,16 +1935,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox13" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox13" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Quinn Flynn
@@ -1943,16 +1968,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox14" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox14" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Charde Marshall
@@ -1974,16 +2001,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox15" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox15" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Haley Kennedy
@@ -2005,16 +2034,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox16" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox16" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Tatyana Fitzpatrick
@@ -2036,16 +2067,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox17" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox17" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Michael Silva
@@ -2067,16 +2100,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox18" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox18" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Paul Byrd
@@ -2098,16 +2133,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox19" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox19" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Gloria Little
@@ -2129,16 +2166,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox20" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox20" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Bradley Greer
@@ -2160,16 +2199,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox21" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox21" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Dai Rios
@@ -2191,16 +2232,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox22" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox22" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Jenette Caldwell
@@ -2222,16 +2265,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox23" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox23" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Yuri Berry
@@ -2253,16 +2298,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox24" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox24" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Caesar Vance
@@ -2284,16 +2331,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox25" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox25" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Doris Wilder
@@ -2315,16 +2364,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox26" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox26" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Angelica Ramos
@@ -2346,16 +2397,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox27" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox27" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Gavin Joyce
@@ -2377,16 +2430,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox28" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox28" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Jennifer Chang
@@ -2408,16 +2463,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox29" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox29" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Brenden Wagner
@@ -2439,16 +2496,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox30" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox30" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Fiona Green
@@ -2470,16 +2529,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox31" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox31" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Shou Itou
@@ -2501,16 +2562,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox32" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox32" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Michelle House
@@ -2532,16 +2595,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox33" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox33" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Suki Burks
@@ -2563,16 +2628,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox34" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox34" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Prescott Bartlett
@@ -2594,16 +2661,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox35" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox35" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Gavin Cortez
@@ -2625,16 +2694,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox36" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox36" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Martena Mccray
@@ -2656,16 +2727,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox37" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox37" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Unity Butler
@@ -2687,16 +2760,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox38" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox38" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Howard Hatfield
@@ -2718,16 +2793,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox39" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox39" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Hope Fuentes
@@ -2749,16 +2826,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox40" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox40" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Vivian Harrell
@@ -2780,16 +2859,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox41" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox41" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Timothy Mooney
@@ -2811,16 +2892,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox42" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox42" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Jackson Bradshaw
@@ -2842,16 +2925,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox43" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox43" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Olivia Liang
@@ -2873,16 +2958,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox44" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox44" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Bruno Nash
@@ -2904,16 +2991,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox45" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox45" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Sakura Yamamoto
@@ -2935,16 +3024,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox46" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox46" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Thor Walton
@@ -2966,16 +3057,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox47" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox47" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Finn Camacho
@@ -2997,16 +3090,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox48" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox48" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Serge Baldwin
@@ -3028,16 +3123,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="Checkbox49" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="Checkbox49" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Zenaida Frank
@@ -3059,16 +3156,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="check-all" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="check-all" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Zorita Serrano
@@ -3090,16 +3189,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="check-all" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="check-all" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Jennifer Acosta
@@ -3121,16 +3222,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="check-all" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="check-all" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Cara Stevens
@@ -3152,16 +3255,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="check-all" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="check-all" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Hermione Butler
@@ -3183,16 +3288,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="check-all" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="check-all" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Lael Greer
@@ -3214,16 +3321,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="check-all" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="check-all" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Jonas Alexander
@@ -3245,16 +3354,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="check-all" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="check-all" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Shad Decker
@@ -3276,16 +3387,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="check-all" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="check-all" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Michael Bruce
@@ -3307,16 +3420,18 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <th>
-                                                                    <input type="checkbox" id="check-all" class="flat">
-                                                                </th>
+                                                            <th>
+                                                                <input type="checkbox" id="check-all" class="flat">
+                                                            </th>
                                                             </td>
                                                             <td>
                                                                 Donna Snider
@@ -3338,9 +3453,11 @@
                                                             </td>
                                                             <td>
                                                                 <button class='btnEdit' onclick="editFunc()">
-                                                                    Edit</button>
+                                                                    Edit
+                                                                </button>
                                                                 <button class='btnDelete' onclick="deleteFunc()">
-                                                                    Delete</button>
+                                                                    Delete
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -3350,7 +3467,7 @@
                                                 <p class="text-muted font-13 m-b-30">
                                                     Use the inbuilt Functionality
                                                 </p>
-                                                <table id="datatable-buttons" class="table table-hover table-striped table-bordered dt-responsive nowrap dataTable no-footer dtr-inline">
+                                                <table id="datatable-buttons" class="table table-hover table-striped table-bordered dt-responsive table-responsive dataTable no-footer dtr-inline" style="width:100%;overflow:scroll!important;">
                                                     <thead>
                                                         <tr>
                                                             <th>

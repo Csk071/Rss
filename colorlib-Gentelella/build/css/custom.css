@@ -4253,3 +4253,37 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
     background-color: #ffff !important;
 }
 /** /bootstrap-datetimepicker **/
+
+/*----- Start "Filters" -----*/
+.filters
+{
+    position: relative;
+    height:auto;
+    margin-bottom: -1px;
+}
+.filters .toggler
+{
+    width: 128px;
+    line-height: 20px;
+    padding: 5px 13px 0 20px;
+    border-bottom: 0;
+    position: relative;   
+    margin-bottom: -1px;
+    cursor: pointer;
+    /*background: #fff url(content/images/arrow-3.gif) no-repeat 9px center;
+    background-color: #fff;*/
+    border-style: solid;
+    border-width: 1px;
+    border-color: #b9d9f2 #b9d9f2 #FFFFFF #b9d9f2;
+}
+.filters .toggler-opened
+{
+    background: #fff url(content/images/arrow-3-opened.gif) no-repeat 9px center;
+}
+.filters .content
+{
+    border: 1px solid #b9d9f2;
+    background: #fff;
+    padding: 10px;
+}
+/*------ End "Filters" ------*/

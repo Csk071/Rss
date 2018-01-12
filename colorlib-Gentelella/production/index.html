@@ -17,7 +17,7 @@
     <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
     <!-- bootstrap-progressbar -->
     <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css"
-        rel="stylesheet">
+          rel="stylesheet">
     <!-- JQVMap -->
     <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
     <!-- bootstrap-daterangepicker -->
@@ -25,22 +25,19 @@
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
     <style type="text/css">
-        .projecttable ul
-        {
-            display:inline !important;    
-        }
-        
-        .projecttable ul li
-        {
-            padding:0px 1px;
+        .projecttable ul {
             display: inline !important;
-            float: left !important;
         }
-        
-        .redefinePadding
-        {
-            padding:8px 1px !important;
+
+            .projecttable ul li {
+                padding: 0px 1px;
+                display: inline !important;
+                float: left !important;
             }
+
+        .redefinePadding {
+            padding: 8px 1px !important;
+        }
     </style>
 </head>
 <body class="nav-md">
@@ -61,7 +58,8 @@
                         <div class="profile_info">
                             <span>Welcome,</span>
                             <h2>
-                                User</h2>
+                                User
+                            </h2>
                         </div>
                     </div>
                     <!-- /menu profile quick info -->
@@ -70,7 +68,8 @@
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                         <div class="menu_section">
                             <h3>
-                                General</h3>
+                                General
+                            </h3>
                             <ul class="nav side-menu">
                                 <li><a href="index.html"><i class="fa fa-home"></i>Dashboard</a> </li>
                                 <li><a href="tables_dynamic.html"><i class="fa fa-table"></i>Table Dynamic</a></li>
@@ -109,16 +108,19 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">
-                                    &times;</button>
+                                    &times;
+                                </button>
                                 <h4 class="modal-title">
-                                    Add Project Details</h4>
+                                    Add Project Details
+                                </h4>
                             </div>
                             <div class="modal-body">
                                 Add Project Details
                             </div>
                             <div class="modal-footer">
                                 <button type="button" data-dismiss="modal" class="btn btn-default">
-                                    Close</button>
+                                    Close
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -128,16 +130,19 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">
-                                    &times;</button>
+                                    &times;
+                                </button>
                                 <h4 class="modal-title">
-                                    Edit Project Details</h4>
+                                    Edit Project Details
+                                </h4>
                             </div>
                             <div class="modal-body">
                                 Edit Project Details
                             </div>
                             <div class="modal-footer">
                                 <button type="button" data-dismiss="modal" class="btn btn-default">
-                                    Close</button>
+                                    Close
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -147,7 +152,8 @@
                         <div class="x_panel">
                             <div class="x_title">
                                 <h2>
-                                    Projects</h2>
+                                    Projects
+                                </h2>
                                 <ul class="nav navbar-right panel_toolbox">
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                                     <li><a class="close-link"><i class="fa fa-close"></i></a></li>
@@ -156,6 +162,34 @@
                                 </div>
                             </div>
                             <div class="x_content" style="overflow: auto">
+                                <div id="filters" class="filters" style="padding-bottom:5px">
+                                    <p class="toggler">
+                                        Hide Filters
+                                    </p>
+                                    <div class="content">
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td align="right" width="100px" style="padding-top: 5px;">
+                                                    Keyword:
+                                                </td>
+                                                <td style="padding-left: 10px;">
+                                                    <input id="txtKeyword" type="text" class="form-control" />
+                                                </td>
+                                                <td style="width: 20px;">
+                                                    &nbsp;
+                                                </td>
+                                                <td rowspan="2" valign="middle" style="padding-top:5px">
+                                                    <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-search" aria-hidden="true"></i> Search</button>
+                                                </td>
+
+                                                <td rowspan="2" valign="middle" style="padding-top:5px">
+                                                    <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-undo" aria-hidden="true"></i> Reset</button>
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                    </div>
+                                </div>
                                 <table class="table table-striped projects table-responsive projecttable">
                                     <thead>
                                         <tr>
@@ -211,13 +245,19 @@
                                             </td>
                                             <td>
                                                 <button type="button" class="btn btn-success btn-xs">
-                                                    Success</button>
+                                                    Success
+                                                </button>
                                             </td>
                                             <td class="redefinePadding">
-                                                <a href="#" class="btn btn-primary btn-xs" onclick="addFunc()"><i class="fa fa-folder">
-                                                </i>View </a><a href="#" class="btn btn-info btn-xs" onclick="editFunc()"><i class="fa fa-pencil">
-                                                </i>Edit </a><a href="#" class="btn btn-danger btn-xs" onclick="deleteFunc()"><i
-                                                    class="fa fa-trash-o"></i>Delete </a>
+                                                <a href="#" class="btn btn-primary btn-xs" onclick="addFunc()">
+                                                    <i class="fa fa-folder">
+                                                    </i>View
+                                                </a><a href="#" class="btn btn-info btn-xs" onclick="editFunc()">
+                                                    <i class="fa fa-pencil">
+                                                    </i>Edit
+                                                </a><a href="#" class="btn btn-danger btn-xs" onclick="deleteFunc()">
+                                                    <i class="fa fa-trash-o"></i>Delete
+                                                </a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -248,13 +288,19 @@
                                             </td>
                                             <td>
                                                 <button type="button" class="btn btn-success btn-xs">
-                                                    Success</button>
+                                                    Success
+                                                </button>
                                             </td>
-                                            <td>
-                                                <a href="#" class="btn btn-primary btn-xs" onclick="addFunc()"><i class="fa fa-folder">
-                                                </i>View </a><a href="#" class="btn btn-info btn-xs" onclick="editFunc()"><i class="fa fa-pencil">
-                                                </i>Edit </a><a href="#" class="btn btn-danger btn-xs" onclick="deleteFunc()"><i
-                                                    class="fa fa-trash-o"></i>Delete </a>
+                                            <td class="redefinePadding">
+                                                <a href="#" class="btn btn-primary btn-xs" onclick="addFunc()">
+                                                    <i class="fa fa-folder">
+                                                    </i>View
+                                                </a><a href="#" class="btn btn-info btn-xs" onclick="editFunc()">
+                                                    <i class="fa fa-pencil">
+                                                    </i>Edit
+                                                </a><a href="#" class="btn btn-danger btn-xs" onclick="deleteFunc()">
+                                                    <i class="fa fa-trash-o"></i>Delete
+                                                </a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -288,13 +334,19 @@
                                             </td>
                                             <td>
                                                 <button type="button" class="btn btn-success btn-xs">
-                                                    Success</button>
+                                                    Success
+                                                </button>
                                             </td>
                                             <td class="redefinePadding">
-                                                <a href="#" class="btn btn-primary btn-xs" onclick="addFunc()"><i class="fa fa-folder">
-                                                </i>View </a><a href="#" class="btn btn-info btn-xs" onclick="editFunc()"><i class="fa fa-pencil">
-                                                </i>Edit </a><a href="#" class="btn btn-danger btn-xs" onclick="deleteFunc()"><i
-                                                    class="fa fa-trash-o"></i>Delete </a>
+                                                <a href="#" class="btn btn-primary btn-xs" onclick="addFunc()">
+                                                    <i class="fa fa-folder">
+                                                    </i>View
+                                                </a><a href="#" class="btn btn-info btn-xs" onclick="editFunc()">
+                                                    <i class="fa fa-pencil">
+                                                    </i>Edit
+                                                </a><a href="#" class="btn btn-danger btn-xs" onclick="deleteFunc()">
+                                                    <i class="fa fa-trash-o"></i>Delete
+                                                </a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -331,13 +383,19 @@
                                             </td>
                                             <td>
                                                 <button type="button" class="btn btn-success btn-xs">
-                                                    Success</button>
+                                                    Success
+                                                </button>
                                             </td>
                                             <td class="redefinePadding">
-                                                <a href="#" class="btn btn-primary btn-xs" onclick="addFunc()"><i class="fa fa-folder">
-                                                </i>View </a><a href="#" class="btn btn-info btn-xs" onclick="editFunc()"><i class="fa fa-pencil">
-                                                </i>Edit </a><a href="#" class="btn btn-danger btn-xs" onclick="deleteFunc()"><i
-                                                    class="fa fa-trash-o"></i>Delete </a>
+                                                <a href="#" class="btn btn-primary btn-xs" onclick="addFunc()">
+                                                    <i class="fa fa-folder">
+                                                    </i>View
+                                                </a><a href="#" class="btn btn-info btn-xs" onclick="editFunc()">
+                                                    <i class="fa fa-pencil">
+                                                    </i>Edit
+                                                </a><a href="#" class="btn btn-danger btn-xs" onclick="deleteFunc()">
+                                                    <i class="fa fa-trash-o"></i>Delete
+                                                </a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -371,13 +429,19 @@
                                             </td>
                                             <td>
                                                 <button type="button" class="btn btn-success btn-xs">
-                                                    Success</button>
+                                                    Success
+                                                </button>
                                             </td>
                                             <td class="redefinePadding">
-                                                <a href="#" class="btn btn-primary btn-xs" onclick="addFunc()"><i class="fa fa-folder">
-                                                </i>View </a><a href="#" class="btn btn-info btn-xs" onclick="editFunc()"><i class="fa fa-pencil">
-                                                </i>Edit </a><a href="#" class="btn btn-danger btn-xs" onclick="deleteFunc()"><i
-                                                    class="fa fa-trash-o"></i>Delete </a>
+                                                <a href="#" class="btn btn-primary btn-xs" onclick="addFunc()">
+                                                    <i class="fa fa-folder">
+                                                    </i>View
+                                                </a><a href="#" class="btn btn-info btn-xs" onclick="editFunc()">
+                                                    <i class="fa fa-pencil">
+                                                    </i>Edit
+                                                </a><a href="#" class="btn btn-danger btn-xs" onclick="deleteFunc()">
+                                                    <i class="fa fa-trash-o"></i>Delete
+                                                </a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -414,13 +478,19 @@
                                             </td>
                                             <td>
                                                 <button type="button" class="btn btn-success btn-xs">
-                                                    Success</button>
+                                                    Success
+                                                </button>
                                             </td>
                                             <td class="redefinePadding">
-                                                <a href="#" class="btn btn-primary btn-xs" onclick="addFunc()"><i class="fa fa-folder">
-                                                </i>View </a><a href="#" class="btn btn-info btn-xs" onclick="editFunc()"><i class="fa fa-pencil">
-                                                </i>Edit </a><a href="#" class="btn btn-danger btn-xs" onclick="deleteFunc()"><i
-                                                    class="fa fa-trash-o"></i>Delete </a>
+                                                <a href="#" class="btn btn-primary btn-xs" onclick="addFunc()">
+                                                    <i class="fa fa-folder">
+                                                    </i>View
+                                                </a><a href="#" class="btn btn-info btn-xs" onclick="editFunc()">
+                                                    <i class="fa fa-pencil">
+                                                    </i>Edit
+                                                </a><a href="#" class="btn btn-danger btn-xs" onclick="deleteFunc()">
+                                                    <i class="fa fa-trash-o"></i>Delete
+                                                </a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -451,13 +521,19 @@
                                             </td>
                                             <td>
                                                 <button type="button" class="btn btn-success btn-xs">
-                                                    Success</button>
+                                                    Success
+                                                </button>
                                             </td>
                                             <td class="redefinePadding">
-                                                <a href="#" class="btn btn-primary btn-xs" onclick="addFunc()"><i class="fa fa-folder">
-                                                </i>View </a><a href="#" class="btn btn-info btn-xs" onclick="editFunc()"><i class="fa fa-pencil">
-                                                </i>Edit </a><a href="#" class="btn btn-danger btn-xs" onclick="deleteFunc()"><i
-                                                    class="fa fa-trash-o"></i>Delete </a>
+                                                <a href="#" class="btn btn-primary btn-xs" onclick="addFunc()">
+                                                    <i class="fa fa-folder">
+                                                    </i>View
+                                                </a><a href="#" class="btn btn-info btn-xs" onclick="editFunc()">
+                                                    <i class="fa fa-pencil">
+                                                    </i>Edit
+                                                </a><a href="#" class="btn btn-danger btn-xs" onclick="deleteFunc()">
+                                                    <i class="fa fa-trash-o"></i>Delete
+                                                </a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -491,13 +567,19 @@
                                             </td>
                                             <td>
                                                 <button type="button" class="btn btn-success btn-xs">
-                                                    Success</button>
+                                                    Success
+                                                </button>
                                             </td>
                                             <td class="redefinePadding">
-                                                <a href="#" class="btn btn-primary btn-xs" onclick="addFunc()"><i class="fa fa-folder">
-                                                </i>View </a><a href="#" class="btn btn-info btn-xs" onclick="editFunc()"><i class="fa fa-pencil">
-                                                </i>Edit </a><a href="#" class="btn btn-danger btn-xs" onclick="deleteFunc()"><i
-                                                    class="fa fa-trash-o"></i>Delete </a>
+                                                <a href="#" class="btn btn-primary btn-xs" onclick="addFunc()">
+                                                    <i class="fa fa-folder">
+                                                    </i>View
+                                                </a><a href="#" class="btn btn-info btn-xs" onclick="editFunc()">
+                                                    <i class="fa fa-pencil">
+                                                    </i>Edit
+                                                </a><a href="#" class="btn btn-danger btn-xs" onclick="deleteFunc()">
+                                                    <i class="fa fa-trash-o"></i>Delete
+                                                </a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -534,13 +616,19 @@
                                             </td>
                                             <td>
                                                 <button type="button" class="btn btn-success btn-xs">
-                                                    Success</button>
+                                                    Success
+                                                </button>
                                             </td>
                                             <td class="redefinePadding">
-                                                <a href="#" class="btn btn-primary btn-xs" onclick="addFunc()"><i class="fa fa-folder">
-                                                </i>View </a><a href="#" class="btn btn-info btn-xs" onclick="editFunc()"><i class="fa fa-pencil">
-                                                </i>Edit </a><a href="#" class="btn btn-danger btn-xs" onclick="deleteFunc()"><i
-                                                    class="fa fa-trash-o"></i>Delete </a>
+                                                <a href="#" class="btn btn-primary btn-xs" onclick="addFunc()">
+                                                    <i class="fa fa-folder">
+                                                    </i>View
+                                                </a><a href="#" class="btn btn-info btn-xs" onclick="editFunc()">
+                                                    <i class="fa fa-pencil">
+                                                    </i>Edit
+                                                </a><a href="#" class="btn btn-danger btn-xs" onclick="deleteFunc()">
+                                                    <i class="fa fa-trash-o"></i>Delete
+                                                </a>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -555,7 +643,8 @@
                             <div class="x_panel tile overflow_hidden" style="margin-bottom: 0px;">
                                 <div class="x_title">
                                     <h2 class="count_top">
-                                        <i class="fa fa-clock-o"></i>Ongoing Projects</h2>
+                                        <i class="fa fa-clock-o"></i>Ongoing Projects
+                                    </h2>
                                     <ul class="nav navbar-right panel_toolbox">
                                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                                         <li><a class="close-link"><i class="fa fa-close"></i></a></li>
@@ -565,9 +654,12 @@
                                 </div>
                                 <div class="x_content">
                                     <div class="count">
-                                        300</div>
-                                    <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i>From
-                                        last Week</span>
+                                        300
+                                    </div>
+                                    <span class="count_bottom">
+                                        <i class="green"><i class="fa fa-sort-asc"></i>3% </i>From
+                                        last Week
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -577,7 +669,8 @@
                         <div class="x_panel tile fixed_height_320 overflow_hidden" style="margin-bottom: 0px;">
                             <div class="x_title">
                                 <h2>
-                                    Working Domain</h2>
+                                    Working Domain
+                                </h2>
                                 <ul class="nav navbar-right panel_toolbox">
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                                     <li><a class="close-link"><i class="fa fa-close"></i></a></li>
@@ -590,16 +683,19 @@
                                     <tr>
                                         <th style="width: 37%;">
                                             <p>
-                                                Top 5</p>
+                                                Top 5
+                                            </p>
                                         </th>
                                         <th>
                                             <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
                                                 <p class="">
-                                                    Domain</p>
+                                                    Domain
+                                                </p>
                                             </div>
                                             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
                                                 <p class="">
-                                                    Projects</p>
+                                                    Projects
+                                                </p>
                                             </div>
                                         </th>
                                     </tr>
@@ -670,7 +766,8 @@
                         <div class="x_panel">
                             <div class="x_title">
                                 <h2>
-                                    To Do List <small>Sample tasks</small></h2>
+                                    To Do List <small>Sample tasks</small>
+                                </h2>
                                 <ul class="nav navbar-right panel_toolbox">
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                                     <li><a class="close-link"><i class="fa fa-close"></i></a></li>
@@ -729,13 +826,16 @@
                             <div class="row x_title">
                                 <div class="col-md-6">
                                     <h3>
-                                        Marketing Campaigns</h3>
+                                        Marketing Campaigns
+                                    </h3>
                                 </div>
                                 <div class="col-md-6">
                                     <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer;
                                         padding: 5px 10px; border: 1px solid #ccc">
-                                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i><span>December 30, 2014 -
-                                            January 28, 2015</span> <b class="caret"></b>
+                                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i><span>
+                                            December 30, 2014 -
+                                            January 28, 2015
+                                        </span> <b class="caret"></b>
                                     </div>
                                 </div>
                             </div>
@@ -746,14 +846,16 @@
                             <div class="col-md-3 col-sm-3 col-xs-12 bg-white">
                                 <div class="x_title">
                                     <h2>
-                                        Top Campaign Performance</h2>
+                                        Top Campaign Performance
+                                    </h2>
                                     <div class="clearfix">
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-6">
                                     <div>
                                         <p>
-                                            Facebook Campaign</p>
+                                            Facebook Campaign
+                                        </p>
                                         <div class="">
                                             <div class="progress progress_sm" style="width: 76%;">
                                                 <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="80">
@@ -763,7 +865,8 @@
                                     </div>
                                     <div>
                                         <p>
-                                            Twitter Campaign</p>
+                                            Twitter Campaign
+                                        </p>
                                         <div class="">
                                             <div class="progress progress_sm" style="width: 76%;">
                                                 <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="60">
@@ -775,7 +878,8 @@
                                 <div class="col-md-12 col-sm-12 col-xs-6">
                                     <div>
                                         <p>
-                                            Conventional Media</p>
+                                            Conventional Media
+                                        </p>
                                         <div class="">
                                             <div class="progress progress_sm" style="width: 76%;">
                                                 <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="40">
@@ -785,7 +889,8 @@
                                     </div>
                                     <div>
                                         <p>
-                                            Bill boards</p>
+                                            Bill boards
+                                        </p>
                                         <div class="">
                                             <div class="progress progress_sm" style="width: 76%;">
                                                 <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="50">
@@ -852,6 +957,22 @@
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
     <script type="text/javascript">
+        $(function () {
+            $('.filters .toggler').parents('.filters:eq(0)').find('.content').hide();
+            $('.filters .toggler').html('Show Filters');
+            //    $('.filters .toggler').css("border-bottom-color","#b9d9f2");
+            $('.filters .toggler').click(function () {
+                if ($(this).parents('.filters:eq(0)').find('.content').is(':hidden')) {
+                    $(this).parents('.filters:eq(0)').find('.content').slideDown();
+                    $(this).html('Hide Filters');
+                    //            $('.filters .toggler').css("border-bottom-color", "#FFFFFF");
+                } else {
+                    $(this).parents('.filters:eq(0)').find('.content').slideUp();
+                    $(this).html('Show Filters');
+                    //            $('.filters .toggler').css("border-bottom-color", "#b9d9f2");
+                }
+            });
+        });
         function addFunc() {
             $('#addWindow').modal('show');
         }
