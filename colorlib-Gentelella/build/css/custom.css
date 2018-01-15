@@ -2558,7 +2558,7 @@ ul.bar_tabs>li {
     border-radius: 4px 4px 0 0
 }
 ul.bar_tabs>li.active {
-    border-right: 6px solid #D3D6DA;
+    border-right: 0px solid #D3D6DA;
     border-top: 0;
     margin-top: -15px
 }
@@ -4254,36 +4254,60 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
 }
 /** /bootstrap-datetimepicker **/
 
-/*----- Start "Filters" -----*/
-.filters
-{
-    position: relative;
-    height:auto;
-    margin-bottom: -1px;
+
+
+.hidden-xs-up {
+    display: none!important
 }
-.filters .toggler
-{
-    width: 128px;
-    line-height: 20px;
-    padding: 5px 13px 0 20px;
-    border-bottom: 0;
-    position: relative;   
-    margin-bottom: -1px;
-    cursor: pointer;
-    /*background: #fff url(content/images/arrow-3.gif) no-repeat 9px center;
-    background-color: #fff;*/
-    border-style: solid;
-    border-width: 1px;
-    border-color: #b9d9f2 #b9d9f2 #FFFFFF #b9d9f2;
+
+@media (max-width:575px) {
+    .hidden-xs-down {
+        display: none!important
+    }
 }
-.filters .toggler-opened
-{
-    background: #fff url(content/images/arrow-3-opened.gif) no-repeat 9px center;
+
+@media (min-width:576px) {
+    .hidden-sm-up {
+        display: none!important
+    }
 }
-.filters .content
-{
-    border: 1px solid #b9d9f2;
-    background: #fff;
-    padding: 10px;
+
+@media (max-width:767px) {
+    .hidden-sm-down {
+        display: none!important
+    }
 }
-/*------ End "Filters" ------*/
+
+@media (min-width:768px) {
+    .hidden-md-up {
+        display: none!important
+    }
+}
+
+@media (max-width:991px) {
+    .hidden-md-down {
+        display: none!important
+    }
+}
+
+@media (min-width:992px) {
+    .hidden-lg-up {
+        display: none!important
+    }
+}
+
+@media (max-width:1199px) {
+    .hidden-lg-down {
+        display: none!important
+    }
+}
+
+@media (min-width:1200px) {
+    .hidden-xl-up {
+        display: none!important
+    }
+}
+
+.hidden-xl-down {
+    display: none!important
+}
