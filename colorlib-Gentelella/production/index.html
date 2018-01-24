@@ -23,7 +23,7 @@
     <!-- bootstrap-daterangepicker -->
     <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
     <!-- Custom Theme Style -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="../build/css/custom.css" rel="stylesheet">
     <style type="text/css">
         .projecttable ul
         {
@@ -176,37 +176,30 @@
                                         Hide Filters
                                     </p>
                                     <div class="content">
-                                        <table border="0" cellpadding="0" cellspacing="0">
-                                            <tr>
-                                                <td align="right" width="100px" style="padding-top: 5px;">
-                                                    Keyword:
-                                                </td>
-                                                <td style="padding-left: 10px;">
-                                                    <input id="txtKeyword" type="text" class="form-control" />
-                                                </td>
-                                                <td style="width: 20px;">
-                                                    &nbsp;
-                                                </td>
-                                                <td style="padding-left: 10px;">
-                                                    <div id="reportrange_right" style="background: #fff; cursor: pointer; padding: 5px 10px;
-                                                        border: 1px solid #ccc">
-                                                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;<span>December 30,
-                                                            2014 - January 28, 2015</span> <b class="caret"></b>
-                                                    </div>
-                                                </td>
-                                                <td style="width: 20px;">
-                                                    &nbsp;
-                                                </td>
-                                                <td rowspan="2" valign="middle" style="padding-top: 5px">
-                                                    <button type="button" class="btn btn-primary btn-sm">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>Search</button>
-                                                </td>
-                                                <td rowspan="2" valign="middle" style="padding-top: 5px">
-                                                    <button type="button" class="btn btn-primary btn-sm">
-                                                        <i class="fa fa-undo" aria-hidden="true"></i>Reset</button>
-                                                </td>
-                                            </tr>
-                                        </table>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <input id="Text1" type="text" class="form-control has-feedback-left" placeholder="keyword" />
+                                                <span class="fa fa-search form-control-feedback left"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                <div id="Div1" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+                                                    <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;<span>December 30,
+                                                        2014 - January 28, 2015</span> <b class="caret"></b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <button type="button" class="btn btn-primary btn-sm">
+                                                    <i class="fa fa-search" aria-hidden="true"></i>&nbsp;Search</button>
+                                                <button type="button" class="btn btn-primary btn-sm">
+                                                    <i class="fa fa-undo" aria-hidden="true"></i>&nbsp;Reset</button>
+                                                <div class="form-group">
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <table class="table table-striped projects table-responsive projecttable">
@@ -1043,7 +1036,7 @@
     <script src="../vendors/moment/min/moment.min.js"></script>
     <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
     <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
+    <script src="../build/js/custom.js"></script>
     <script type="text/javascript">
         $(function () {
             $('.filters .toggler').parents('.filters:eq(0)').find('.content').hide();
@@ -1052,9 +1045,11 @@
             $('.filters .toggler').click(function () {
                 if ($(this).parents('.filters:eq(0)').find('.content').is(':hidden')) {
                     $(this).parents('.filters:eq(0)').find('.content').slideDown();
+                    $(this).parents('.filters:eq(0)').find('.content').addClass("display-inline");
                     $(this).html('Hide Filters');
                     //            $('.filters .toggler').css("border-bottom-color", "#FFFFFF");
                 } else {
+                    $(this).parents('.filters:eq(0)').find('.content').removeClass("display-inline");
                     $(this).parents('.filters:eq(0)').find('.content').slideUp();
                     $(this).html('Show Filters');
                     //            $('.filters .toggler').css("border-bottom-color", "#b9d9f2");
